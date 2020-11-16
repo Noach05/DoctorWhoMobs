@@ -2,12 +2,13 @@ package TheArkNoah05.DoctorWhoMobs.client.models;
 
 
 import TheArkNoah05.DoctorWhoMobs.entities.MondasianCyberman;
+import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraft.entity.Entity;
 
-public class MondasianCybermanModel extends EntityModel<MondasianCyberman> {
+public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 	private final RendererModel Head;
 	private final RendererModel CybermanHat;
 	private final RendererModel Body;
@@ -64,6 +65,10 @@ public class MondasianCybermanModel extends EntityModel<MondasianCyberman> {
 		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 	}
 
+	@Override
+	public void render(MondasianCyberman entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+	}
 
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		Head.render(f5);
