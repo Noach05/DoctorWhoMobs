@@ -1,39 +1,40 @@
 package TheArkNoah05.DoctorWhoMobs.entities;
 
-import TheArkNoah05.DoctorWhoMobs.init.DWMEntities;
-import net.minecraft.entity.CreatureEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SharedMonsterAttributes;
+import android.support.annotation.Nullable;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 public class MondasianCyberman extends CreatureEntity
 {
 
-    @SuppressWarnings("unchecked")
-    public MondasianCyberman(EntityType<? extends CreatureEntity> type, World worldIn)
-    {
-        super((EntityType<? extends CreatureEntity>) DWMEntities.mondasian_cyberman, worldIn);
+    public MondasianCyberman(EntityType<? extends CreatureEntity> type, World world) {
+        super(type, world);
     }
 
-    @Override
     protected void registerGoals()
     {
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1.2d));
         this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-       // this.goalSelector.addGoal(1, new RangedAttackGoal((IRangedAttackMob) this, 1.25D, 15, 20.0F));
     }
 
     @Override
     protected void registerAttributes()
     {
         super.registerAttributes();
-        this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0d);
-        this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(2.5d);
-        this.getAttribute(SharedMonsterAttributes.ATTACK_SPEED).setBaseValue(1.25d);
-        this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(1.2d);
+        this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20d);
+        this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.23F);
     }
-}
+
+    @Nullable
+    public ILivingEntityData onInitialSpawn(IWorld worldIn, DifficultyInstance difficultyIn, SpawnReason reason, ILivingEntityData spawnDataIn, CompoundNBT dataTag) {
+        return super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
+    }
