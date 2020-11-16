@@ -65,19 +65,18 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 	}
 
+
 	@Override
 	public void render(MondasianCyberman entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+		Head.render(scale);
+		Body.render(scale);
+		RightArm.render(scale);
+		LeftArm.render(scale);
+		RightLeg.render(scale);
+		LeftLeg.render(scale);
 	}
 
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		Head.render(f5);
-		Body.render(f5);
-		RightArm.render(f5);
-		LeftArm.render(f5);
-		RightLeg.render(f5);
-		LeftLeg.render(f5);
-	}
 
 	public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;
