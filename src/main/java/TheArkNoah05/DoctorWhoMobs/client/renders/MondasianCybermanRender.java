@@ -19,7 +19,6 @@ public class MondasianCybermanRender extends LivingRenderer<MondasianCyberman, M
         super(manager, new MondasianCybermanModel(), 0f);
     }
 
-    @org.jetbrains.annotations.Nullable
     @Override
     protected ResourceLocation getEntityTexture(MondasianCyberman entity)
     {

@@ -3,11 +3,12 @@ package TheArkNoah05.DoctorWhoMobs.client.models;
 
 import TheArkNoah05.DoctorWhoMobs.entities.MondasianCyberman;
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
-import net.minecraft.entity.Entity;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 	private final RendererModel Head;
 	private final RendererModel CybermanHat;

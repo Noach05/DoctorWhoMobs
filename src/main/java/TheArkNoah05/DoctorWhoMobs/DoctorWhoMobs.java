@@ -1,5 +1,6 @@
 package TheArkNoah05.DoctorWhoMobs;
 
+import TheArkNoah05.DoctorWhoMobs.client.renders.DWMRenderRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -21,6 +22,9 @@ public class DoctorWhoMobs
     {
         instance = this;
 
+       // ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, "doctorwhomobs-server.toml");
+       // ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, "doctorwhomobs-client.toml");
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 
@@ -35,6 +39,7 @@ public class DoctorWhoMobs
 
     private void clientRegistries(final FMLClientSetupEvent event)
     {
+        DWMRenderRegistry.registerEntityRenderers();
         logger.info("clientRegistries method registered.");
 
     }

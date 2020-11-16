@@ -15,7 +15,7 @@ import static TheArkNoah05.DoctorWhoMobs.DoctorWhoMobs.dwmitems;
 
 public class DWMEntities
 {
-    public static EntityType<?> mondasian_cyberman = EntityType.Builder.create(MondasianCyberman::new, EntityClassification.CREATURE).build(DWMRegistries.modid + ":mondasian_cyberman").setRegistryName(DWMRegistries.location("mondasian cyberman"));
+    public static EntityType<?> mondasian_cyberman = EntityType.Builder.create(MondasianCyberman::new, EntityClassification.CREATURE).build(DWMRegistries.modid + ":mondasian_cyberman").setRegistryName(DWMRegistries.location("mondasian_cyberman"));
 
     public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event)
     {
