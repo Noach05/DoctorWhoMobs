@@ -12,13 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
-	private final RendererModel bipedHead;
 	private final RendererModel CybermanHat;
-	private final RendererModel bipedBody;
-	private final RendererModel bipedRightArm;
-	private final RendererModel bipedLeftArm;
-	private final RendererModel bipedRightLeg;
-	private final RendererModel bipedLeftLeg;
 
 	public MondasianCybermanModel() {
 		textureWidth = 128;
@@ -66,17 +60,6 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 		bipedLeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
 		bipedLeftLeg.cubeList.add(new ModelBox(bipedLeftLeg, 17, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
 		bipedLeftLeg.cubeList.add(new ModelBox(bipedLeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
-	}
-
-	@Override
-	public void render(MondasianCyberman entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
-		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-		bipedHead.render(scale);
-		bipedBody.render(scale);
-		bipedRightArm.render(scale);
-		bipedLeftArm.render(scale);
-		bipedRightLeg.render(scale);
-		bipedLeftLeg.render(scale);
 	}
 
 
