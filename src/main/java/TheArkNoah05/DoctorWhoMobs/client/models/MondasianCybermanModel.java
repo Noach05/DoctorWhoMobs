@@ -1,4 +1,6 @@
-package TheArkNoah05.DoctorWhoMobs.client.models;
+package TheArkNoah05.DoctorWhoMobs.client.models;// Made with Blockbench 3.7.4
+// Exported for Minecraft version 1.14
+// Paste this class into your mod and generate all required imports
 
 
 import TheArkNoah05.DoctorWhoMobs.entities.MondasianCyberman;
@@ -30,15 +32,15 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 		CybermanHat = new RendererModel(this);
 		CybermanHat.setRotationPoint(0.0F, 0.0F, 0.0F);
 		Head.addChild(CybermanHat);
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 25, 16, -4.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 34, 58, 3.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 25, 15, -4.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 34, 57, 3.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 44, 0, -4.0F, -13.0F, -1.0F, 3, 2, 2, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 51, 46, 1.0F, -13.0F, -1.0F, 3, 2, 2, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 63, 11, -5.0F, -12.0F, -1.0F, 1, 6, 2, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 64, 21, 4.0F, -12.0F, -1.0F, 1, 6, 2, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 51, 45, 1.0F, -13.0F, -1.0F, 3, 2, 2, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 36, 15, -5.0F, -12.0F, -1.0F, 1, 6, 2, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 63, 11, 4.0F, -12.0F, -1.0F, 1, 6, 2, 0.0F, false));
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 50, 0, -2.0F, -14.0F, -3.0F, 4, 4, 6, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 36, 16, -5.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
-		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 62, 46, 3.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 62, 45, -5.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
+		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 63, 20, 3.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
 
 		Body = new RendererModel(this);
 		Body.setRotationPoint(0.0F, 0.0F, 0.0F);
@@ -47,8 +49,8 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 
 		RightArm = new RendererModel(this);
 		RightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
-		RightArm.cubeList.add(new ModelBox(RightArm, 17, 58, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		RightArm.cubeList.add(new ModelBox(RightArm, 51, 29, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		RightArm.cubeList.add(new ModelBox(RightArm, 17, 57, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		RightArm.cubeList.add(new ModelBox(RightArm, 51, 28, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
 
 		LeftArm = new RendererModel(this);
 		LeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
@@ -57,15 +59,24 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 
 		RightLeg = new RendererModel(this);
 		RightLeg.setRotationPoint(-1.9F, 12.0F, 0.0F);
-		RightLeg.cubeList.add(new ModelBox(RightLeg, 46, 12, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		RightLeg.cubeList.add(new ModelBox(RightLeg, 34, 41, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		RightLeg.cubeList.add(new ModelBox(RightLeg, 46, 11, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		RightLeg.cubeList.add(new ModelBox(RightLeg, 34, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 
 		LeftLeg = new RendererModel(this);
 		LeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
-		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 17, 41, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 17, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
 		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 	}
 
+	public MondasianCybermanModel(RendererModel head, RendererModel cybermanHat, RendererModel body, RendererModel rightArm, RendererModel leftArm, RendererModel rightLeg, RendererModel leftLeg) {
+		Head = head;
+		CybermanHat = cybermanHat;
+		Body = body;
+		RightArm = rightArm;
+		LeftArm = leftArm;
+		RightLeg = rightLeg;
+		LeftLeg = leftLeg;
+	}
 
 	@Override
 	public void render(MondasianCyberman entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
