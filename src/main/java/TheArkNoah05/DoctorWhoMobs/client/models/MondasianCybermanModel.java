@@ -5,7 +5,6 @@ package TheArkNoah05.DoctorWhoMobs.client.models;// Made with Blockbench 3.7.4
 
 import TheArkNoah05.DoctorWhoMobs.entities.MondasianCyberman;
 import net.minecraft.client.renderer.entity.model.BipedModel;
-import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraftforge.api.distmarker.Dist;
@@ -13,26 +12,26 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
-	private final RendererModel Head;
+	private final RendererModel bipedHead;
 	private final RendererModel CybermanHat;
-	private final RendererModel Body;
-	private final RendererModel RightArm;
-	private final RendererModel LeftArm;
-	private final RendererModel RightLeg;
-	private final RendererModel LeftLeg;
+	private final RendererModel bipedBody;
+	private final RendererModel bipedRightArm;
+	private final RendererModel bipedLeftArm;
+	private final RendererModel bipedRightLeg;
+	private final RendererModel bipedLeftLeg;
 
 	public MondasianCybermanModel() {
 		textureWidth = 128;
 		textureHeight = 128;
 
-		Head = new RendererModel(this);
-		Head.setRotationPoint(0.0F, 0.0F, 0.0F);
-		Head.cubeList.add(new ModelBox(Head, 25, 0, -3.0F, -9.0F, -3.0F, 6, 8, 6, 0.0F, false));
-		Head.cubeList.add(new ModelBox(Head, 25, 25, -3.0F, -9.0F, -3.0F, 6, 8, 6, 0.5F, false));
+		bipedHead = new RendererModel(this);
+		bipedHead.setRotationPoint(0.0F, 0.0F, 0.0F);
+		bipedHead.cubeList.add(new ModelBox(bipedHead, 25, 0, -3.0F, -9.0F, -3.0F, 6, 8, 6, 0.0F, false));
+		bipedHead.cubeList.add(new ModelBox(bipedHead, 25, 25, -3.0F, -9.0F, -3.0F, 6, 8, 6, 0.5F, false));
 
 		CybermanHat = new RendererModel(this);
 		CybermanHat.setRotationPoint(0.0F, 0.0F, 0.0F);
-		Head.addChild(CybermanHat);
+		bipedHead.addChild(CybermanHat);
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 25, 15, -4.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 34, 57, 3.0F, -7.0F, -2.0F, 1, 4, 4, 0.0F, false));
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 44, 0, -4.0F, -13.0F, -1.0F, 3, 2, 2, 0.0F, false));
@@ -43,41 +42,41 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 62, 45, -5.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
 		CybermanHat.cubeList.add(new ModelBox(CybermanHat, 63, 20, 3.0F, -6.0F, -1.0F, 2, 2, 2, 0.0F, false));
 
-		Body = new RendererModel(this);
-		Body.setRotationPoint(0.0F, 0.0F, 0.0F);
-		Body.cubeList.add(new ModelBox(Body, 0, 17, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.0F, false));
-		Body.cubeList.add(new ModelBox(Body, 0, 0, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.25F, false));
+		bipedBody = new RendererModel(this);
+		bipedBody.setRotationPoint(0.0F, 0.0F, 0.0F);
+		bipedBody.cubeList.add(new ModelBox(bipedBody, 0, 17, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.0F, false));
+		bipedBody.cubeList.add(new ModelBox(bipedBody, 0, 0, -4.0F, 0.0F, -2.0F, 8, 12, 4, 0.25F, false));
 
-		RightArm = new RendererModel(this);
-		RightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
-		RightArm.cubeList.add(new ModelBox(RightArm, 17, 57, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		RightArm.cubeList.add(new ModelBox(RightArm, 51, 28, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		bipedRightArm = new RendererModel(this);
+		bipedRightArm.setRotationPoint(-5.0F, 2.0F, 0.0F);
+		bipedRightArm.cubeList.add(new ModelBox(bipedRightArm, 17, 57, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		bipedRightArm.cubeList.add(new ModelBox(bipedRightArm, 51, 28, -3.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
 
-		LeftArm = new RendererModel(this);
-		LeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
-		LeftArm.cubeList.add(new ModelBox(LeftArm, 51, 51, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		LeftArm.cubeList.add(new ModelBox(LeftArm, 0, 51, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		bipedLeftArm = new RendererModel(this);
+		bipedLeftArm.setRotationPoint(5.0F, 2.0F, 0.0F);
+		bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 51, 51, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		bipedLeftArm.cubeList.add(new ModelBox(bipedLeftArm, 0, 51, -1.0F, -2.0F, -2.0F, 4, 12, 4, 0.25F, false));
 
-		RightLeg = new RendererModel(this);
-		RightLeg.setRotationPoint(-1.9F, 12.0F, 0.0F);
-		RightLeg.cubeList.add(new ModelBox(RightLeg, 46, 11, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		RightLeg.cubeList.add(new ModelBox(RightLeg, 34, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		bipedRightLeg = new RendererModel(this);
+		bipedRightLeg.setRotationPoint(-1.9F, 12.0F, 0.0F);
+		bipedRightLeg.cubeList.add(new ModelBox(bipedRightLeg, 46, 11, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		bipedRightLeg.cubeList.add(new ModelBox(bipedRightLeg, 34, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 
-		LeftLeg = new RendererModel(this);
-		LeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
-		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 17, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
-		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
+		bipedLeftLeg = new RendererModel(this);
+		bipedLeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
+		bipedLeftLeg.cubeList.add(new ModelBox(bipedLeftLeg, 17, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
+		bipedLeftLeg.cubeList.add(new ModelBox(bipedLeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
 	}
 
 	@Override
 	public void render(MondasianCyberman entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-		Head.render(scale);
-		Body.render(scale);
-		RightArm.render(scale);
-		LeftArm.render(scale);
-		RightLeg.render(scale);
-		LeftLeg.render(scale);
+		bipedHead.render(scale);
+		bipedBody.render(scale);
+		bipedRightArm.render(scale);
+		bipedLeftArm.render(scale);
+		bipedRightLeg.render(scale);
+		bipedLeftLeg.render(scale);
 	}
 
 
