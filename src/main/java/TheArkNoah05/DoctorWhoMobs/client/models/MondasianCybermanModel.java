@@ -5,6 +5,7 @@ package TheArkNoah05.DoctorWhoMobs.client.models;// Made with Blockbench 3.7.4
 
 import TheArkNoah05.DoctorWhoMobs.entities.MondasianCyberman;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
 import net.minecraft.client.renderer.model.ModelBox;
 import net.minecraftforge.api.distmarker.Dist;
@@ -66,16 +67,6 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 		LeftLeg.setRotationPoint(1.9F, 12.0F, 0.0F);
 		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 17, 40, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F, false));
 		LeftLeg.cubeList.add(new ModelBox(LeftLeg, 0, 34, -2.0F, 0.0F, -2.0F, 4, 12, 4, 0.25F, false));
-	}
-
-	public MondasianCybermanModel(RendererModel head, RendererModel cybermanHat, RendererModel body, RendererModel rightArm, RendererModel leftArm, RendererModel rightLeg, RendererModel leftLeg) {
-		Head = head;
-		CybermanHat = cybermanHat;
-		Body = body;
-		RightArm = rightArm;
-		LeftArm = leftArm;
-		RightLeg = rightLeg;
-		LeftLeg = leftLeg;
 	}
 
 	@Override
