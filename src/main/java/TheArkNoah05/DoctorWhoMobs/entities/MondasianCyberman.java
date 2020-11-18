@@ -1,20 +1,20 @@
 package TheArkNoah05.DoctorWhoMobs.entities;
 
-import net.minecraft.entity.*;
+import TheArkNoah05.DoctorWhoMobs.init.DWMEntities;
+import net.minecraft.entity.CreatureEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.IWorld;
+import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
+public class MondasianCyberman extends SkeletonEntity {
 
-public class MondasianCyberman extends CreatureEntity {
-
-    public MondasianCyberman(EntityType<? extends CreatureEntity> type, World world) {
-        super(type, world);
+    @SuppressWarnings("unchecked")
+    public MondasianCyberman(EntityType<? extends CreatureEntity> type, World worldIn) {
+        super((EntityType<? extends SkeletonEntity>) DWMEntities.mondasian_cyberman, worldIn);
     }
 
     protected void registerGoals() {
@@ -28,10 +28,5 @@ public class MondasianCyberman extends CreatureEntity {
         super.registerAttributes();
         this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20d);
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.23F);
-    }
-
-    @Nullable
-    public ILivingEntityData onInitialSpawn(IWorld worldIn, DifficultyInstance difficultyIn, SpawnReason reason, ILivingEntityData spawnDataIn, CompoundNBT dataTag) {
-        return super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
     }
 }
