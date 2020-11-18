@@ -15,6 +15,8 @@ public class MondasianCybermanModel extends BipedModel<MondasianCyberman> {
 	private final RendererModel CybermanHat;
 
 	public MondasianCybermanModel() {
+		bipedHeadwear.isHidden = true;
+
 		textureWidth = 128;
 		textureHeight = 128;
 
