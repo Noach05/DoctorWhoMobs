@@ -8,8 +8,8 @@ displayName="Doctor Who Mobs" #mandatory
 updateJSONURL="https://github.com/Noach05/DoctorWhoMobs/releases" #optional
 displayURL="https://github.com/Noach05/DoctorWhoMobs" #optional //TODO: change to CurseForge URL upon first upload
 logoFile="examplemod.png" #optional
-credits="Special Thanks To:" #optional
-authors="Author(s): TheArkNoah05" #optional
+credits="Special Thanks To: Spectrum, Spectre and Suff" #optional
+authors="Author(s): thearknoah05" #optional
 description='''
 Doctor Who Mobs
 
