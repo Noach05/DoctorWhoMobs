@@ -9,6 +9,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.event.RegistryEvent;
+import thearknoah05.doctorwhomobs.items.ItemList;
 
 import static thearknoah05.doctorwhomobs.DoctorWhoMobs.dwmitems;
 

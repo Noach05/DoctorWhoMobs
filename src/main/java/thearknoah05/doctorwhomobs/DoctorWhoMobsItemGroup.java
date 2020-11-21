@@ -1,6 +1,6 @@
 package thearknoah05.doctorwhomobs;
 
-import thearknoah05.doctorwhomobs.init.ItemList;
+import thearknoah05.doctorwhomobs.items.ItemList;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

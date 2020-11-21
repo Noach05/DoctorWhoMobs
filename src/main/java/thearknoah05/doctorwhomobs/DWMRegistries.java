@@ -4,13 +4,14 @@ import thearknoah05.doctorwhomobs.init.DWMEntities;
 import net.minecraft.entity.EntityType;
 import org.apache.logging.log4j.Logger;
 
-import thearknoah05.doctorwhomobs.init.ItemList;
+import thearknoah05.doctorwhomobs.items.ItemList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import thearknoah05.doctorwhomobs.items.ToolMaterialList;
 
 import static thearknoah05.doctorwhomobs.DoctorWhoMobs.dwmitems;
 

@@ -16,6 +16,7 @@ public class MondasianCyberman extends CreatureEntity implements IRangedAttackMo
         super(type, worldIn);
     }
 
+
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1.2d));

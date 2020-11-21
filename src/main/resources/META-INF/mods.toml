@@ -35,3 +35,9 @@ Enjoy!
     versionRange="[1.14.4]"
     ordering="NONE"
     side="BOTH"
+[[dependencies.doctorwhomobs]]
+    modId="tardis"
+    mandatory=false
+    versionRange="[1.4.1,)"
+    ordering="BEFORE"
+    side="BOTH"
