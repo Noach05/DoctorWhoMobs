@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class MondasianCyberman extends CreatureEntity {
+public class MondasianCyberman extends CreatureEntity implements IRangedAttackMob{
 
     public MondasianCyberman(EntityType<? extends CreatureEntity> type, World worldIn) {
         super(type, worldIn);
@@ -36,5 +36,10 @@ public class MondasianCyberman extends CreatureEntity {
     public ILivingEntityData onInitialSpawn(IWorld worldIn, DifficultyInstance difficultyIn, SpawnReason reason, @Nullable ILivingEntityData spawnDataIn, @Nullable CompoundNBT dataTag) {
         spawnDataIn = super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
         return spawnDataIn;
+    }
+
+    @Override
+    public void attackEntityWithRangedAttack(LivingEntity target, float distanceFactor) {
+       // MondasianCyberman.onAttack(this, target, distanceFactor);
     }
 }
