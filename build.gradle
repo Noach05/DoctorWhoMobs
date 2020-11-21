@@ -14,18 +14,22 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '${mod_version}'
+version = "${mod_version}"
 group = 'com.TheArkNoah05.doctorwhomobs' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = '${project.jar_name}-${minecraft-version}'
+archivesBaseName = "${project.jar_name}-${minecraft_version}"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+
+configurations {
+    include
+}
 
 repositories {
     maven { url 'https://jitpack.io' }
 }
 
 minecraft {
-    mappings channel: '${mappings_type}', version: '${mappings_version}'
+    mappings channel: "${mappings_type}", version: "${mappings_version}"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -74,7 +78,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'doctorwhomobs', '--all', '--output', file('src/main/generated')
+            args '--mod', 'doctorwhomobs', '--all', '--output', file('src/generated/resources')
 
             mods {
                 doctorwhomobs {
@@ -86,44 +90,23 @@ minecraft {
 }
 
 dependencies {
-    // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.14.4-28.2.23'
-    implementation fg.deobf("com.gitlab.Spectre0987:TardisMod-1-14:1.4.1-SNAPSHOT")
+    minecraft "net.minecraftforge:forge:${forge_version}"
+    compile fg.deobf("com.gitlab.Spectre0987:TardisMod-1-14:${tm_tag}")
+    runtime fg.deobf("com.gitlab.Spectre0987:TardisMod-1-14:${tm_tag}")
 
-    // You may put jars on which you depend on in ./libs or you may define them like so..
-    // compile "some.group:artifact:version:classifier"
-    // compile "some.group:artifact:version"
 
-    // Real examples
-    // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    // compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
-
-    // The 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-    // provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // These dependencies get remapped to your current MCP mappings
-    // deobf 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-    // For more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
-}
-
-// Example for how to get properties into the manifest for reading by the runtime..
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "doctorwhomobs",
-            "Specification-Vendor": "doctorwhomobs",
-            "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"doctorwhomobs",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-        ])
+    jar {
+        manifest {
+            attributes([
+                    "Specification-Title"     : "doctorwhomobs",
+                    "Specification-Vendor"    : "doctorwhomobs",
+                    "Specification-Version"   : "${version}",
+                    "Implementation-Title"    : project.name,
+                    "Implementation-Version"  : "${version}",
+                    "Implementation-Vendor"   : "doctorwhomobs",
+                    "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            ])
+        }
     }
-}
 
+}
