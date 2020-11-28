@@ -1,5 +1,7 @@
 package thearknoah05.doctorwhomobs.init;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
 import thearknoah05.doctorwhomobs.DWMRegistries;
 import thearknoah05.doctorwhomobs.entities.MondasianCyberman;
 import net.minecraft.entity.EntityClassification;
