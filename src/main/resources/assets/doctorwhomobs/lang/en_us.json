@@ -1,0 +1,10 @@
+{
+    "item.doctorwhomobs.cyberium_ingot": "Cyberium Ingot",
+    "item.doctorwhomobs.mondasian_cyberman_egg": "Mondasian Cyberman Spawn Egg",
+    "item.doctorwhomobs.karn_sisterhood_egg": "Sisterhood Of Karn Spawn Egg",
+
+    "entity.doctorwhomobs.mondasian_cyberman": "Mondasian Cyberman",
+    "entity.doctorwhomobs.karn_sisterhood": "Sisterhood Of Karn",
+
+    "itemGroup.doctorwhomobs": "Doctor Who Mobs"
+}
